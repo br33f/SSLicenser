@@ -1,0 +1,30 @@
+{
+  "env": {
+    "node": true,
+    "browser": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false
+    }
+  },
+  "globals": {
+    "_": true,
+    "sails": true,
+    "async": true,
+    "server": true,
+
+    "User": true,
+
+    "UserService": true
+  },
+  "extends":[
+    "eslint:recommended"
+  ],
+  "rules":{
+    "no-unused-vars": "warn",
+    "no-console": "warn"
+  }
+}
