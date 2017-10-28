@@ -19,6 +19,7 @@
     "backbone.marionette": "^3.0.0",
     "bootstrap": "^4.0.0-beta.2",
     "jquery": "~1.12.2",
+    "marionette.binding": "0.0.11",
     "mdi": "^2.0.46",
     "popper.js": "^1.12.6",
     "underscore": "^1.8.3"

@@ -1,0 +1,31 @@
+.navbar {
+  .navbar-brand {
+    color: $color-primary;
+    font-weight: $fw-standard;
+  }
+
+  .navbar-text {
+    font-size: $font-size-sm;
+  }
+
+  .dropdown-toggle::after {
+    vertical-align: 0.1rem;
+  }
+
+  .nav-link {
+    font-weight: $fw-light;
+  }
+
+  .alert-item {
+    .mdi {
+      color: $color-tertiary;
+    }
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    #navbarSupportedContent {
+      border-left: 1px solid;
+      border-left-color: $gray-400;
+    }
+  }
+}

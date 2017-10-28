@@ -1,0 +1,30 @@
+.dropdown-menu {
+  background-color: $gray-100;
+  border-radius: 0;
+  left: inherit;
+
+  .dropdown-item {
+    &:hover {
+      background-color: $gray-200;
+    }
+  }
+}
+
+
+.badge-inactive {
+  background-color: $color-background;
+  color: $color-text;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.badge-active {
+  background-color: $color-secondary;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}

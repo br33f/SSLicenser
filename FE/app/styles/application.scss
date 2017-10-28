@@ -1,13 +1,18 @@
-/* bootstrap */
-@import "custom-bootstrap";
-@import "~bootstrap/scss/bootstrap";
+/* variables */
+@import "common/variables";
 
 /* material design icons */
 @import "mdi";
 $mdi-font-path: "~mdi/fonts";
 @import "~mdi/scss/materialdesignicons";
 
+/* bootstrap */
+@import "custom-bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
+
 /* common components */
+@import "common/global";
 @import "common/header";
 
 /* view specific */

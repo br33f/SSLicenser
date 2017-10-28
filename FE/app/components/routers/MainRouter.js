@@ -19,7 +19,7 @@ export default AbstractRouter.extend({
   ControllerClass: MainController,
 
   appRoutes : {
-    'homepage': 'showHomepage',
+    'panel': 'showHomepage',
     '': 'showHomepage',
   }
 });

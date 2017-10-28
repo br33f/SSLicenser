@@ -1,13 +1,32 @@
 export default {
   i18n: {
-    languageFile: require("assets/lang/pl.json"),
+    _languageFile: require("assets/lang/pl.json"),
     t: function (path) {
-      return SS.utils.findNested(this.languageFile, path) || path;
+      return SS.utils.findNested(this._languageFile, path) || path;
     }
   },
 
   utils: {
     findNested: _findNested
+  },
+
+  alerts: {
+    _alertList: [],
+    _hasChanged: true,
+    getList: function () {
+      this._hasChanged = false;
+      return this._alertList;
+    },
+    clear: function () {
+      this._alertList = [];
+    },
+    add: function (msg) {
+      this._hasChanged = true;
+      this._alertList.push(msg);
+    },
+    hasChanged: function () {
+      return this._hasChanged;
+    }
   }
 };
 

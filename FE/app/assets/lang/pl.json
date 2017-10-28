@@ -1,5 +1,15 @@
 {
   "HEADER": {
-    "TITLE": "SSLICENSER"
+    "TITLE": "sslicenser",
+    "PANEL": "Panel",
+    "CONTACT": "Kontakt",
+    "ACCOUNT": "Moje konto",
+    "LOGIN": "Zaloguj się",
+    "LOGOUT": "Wyloguj się",
+    "REGISTER": "Załóż konto",
+    "SETTINGS": "Konfiguracja",
+    "API": "API",
+    "INVOICES": "Rachunki",
+    "ALERTS": "Powiadomienia"
   }
 }
