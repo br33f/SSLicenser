@@ -6,6 +6,9 @@ import Backbone from 'backbone';
 /* Views */
 import MainView from './views/Main';
 
+/* SS Helper */
+import SSHelper from './SSHelper';
+
 /* Routers */
 import MainRouter from './routers/MainRouter';
 import ProductRouter from './routers/ProductRouter';
@@ -14,8 +17,18 @@ export default Marionette.Application.extend({
   region: '#app',
   layoutView: null,
 
-  onStart() {
+  onBeforeStart() {
+    this.setGlobalFunctions();
+
     this.layoutView = new MainView();
+  },
+
+  setGlobalFunctions() {
+    window['SS'] = SSHelper;
+  },
+
+  onStart() {
+
     this.startRouters();
 
     Backbone.history.start();
