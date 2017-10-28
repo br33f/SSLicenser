@@ -1,7 +1,6 @@
 'use strict';
 
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const merge = require('webpack-merge');
@@ -28,12 +27,35 @@ const webpackCommon = {
         }
       },
       {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
-        })
+        test: /\.(scss)$/,
+        use: [{
+          loader: 'style-loader', // inject CSS to page
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS modules
+        }, {
+          loader: 'postcss-loader', // Run post css actions
+          options: {
+            plugins: function () { // post css plugins, can be exported to postcss.config.js
+              return [
+                require('precss'),
+                require('autoprefixer')
+              ];
+            }
+          }
+        }, {
+          loader: 'sass-loader' // compiles SASS to CSS
+        }]
+      },
+      {
+        test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',    // where the fonts will go
+            publicPath: '../'       // override the default path
+          }
+        }]
       }
     ]
   },
@@ -43,15 +65,15 @@ const webpackCommon = {
     publicPath: '/'
   },
   plugins: [
-    new ExtractTextPlugin('app.css'),
     new CopyWebpackPlugin([{
       from: './app/assets/index.html',
       to: './index.html'
     }]),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      _: 'underscore'
-    })
+      _: 'underscore',
+      Popper: ['popper.js', 'default'],
+    }),
   ],
   resolve: {
     modules: [
