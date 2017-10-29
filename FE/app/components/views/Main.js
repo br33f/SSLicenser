@@ -14,8 +14,8 @@ export default Marionette.View.extend({
 
   regions: {
     header: {
-      el: '#headerPlaceholder',
-      replaceElement: true
+      el: '#header',
+      replaceElement: false
     },
     breadcrumbs: {
       el: '#breadcrumbs',
@@ -30,9 +30,13 @@ export default Marionette.View.extend({
       replaceElement: false
     },
     footer: {
-      el: '#footerPlaceholder',
-      replaceElement: true
+      el: '#footer',
+      replaceElement: false
     }
+  },
+
+  initialize: function () {
+    $(window).on("resize", this.updateContentMaxHeight.bind(this));
   },
 
   onRender: function () {
@@ -50,5 +54,13 @@ export default Marionette.View.extend({
     this.showChildView('content', view);
     this.breadcrumbs.refresh();
     this.menu.refresh();
+    this.updateContentMaxHeight();
+  },
+
+  updateContentMaxHeight: function () {
+    let $contentElement = this.$el.find('#content');
+    let $footerElement = this.$el.find('#footer');
+    let maxHeightCalculated = $(window).height() - $contentElement.offset().top - $footerElement.height();
+    $contentElement.css('max-height', maxHeightCalculated);
   }
 });

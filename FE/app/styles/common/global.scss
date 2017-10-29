@@ -34,3 +34,16 @@
   padding: 1rem;
   border-radius: 0.2rem;
 }
+
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
+  .default-content-container {
+    max-height: inherit;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, md)) {
+  #content {
+    max-height: none !important;
+  }
+}
