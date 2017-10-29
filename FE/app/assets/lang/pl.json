@@ -13,17 +13,22 @@
     "ALERTS": "Powiadomienia"
   },
   "MENU": {
-    "HOME": "Strona główna",
-    "PANEL": "Panel",
-    "CONTACT": "Kontakt",
-    "ACCOUNT": "Moje konto",
-    "LOGIN": "Zaloguj się",
-    "LOGOUT": "Wyloguj się",
-    "REGISTER": "Załóż konto",
-    "SETTINGS": "Konfiguracja",
-    "API": "API",
-    "INVOICES": "Rachunki",
-    "ALERTS": "Powiadomienia",
-    "NOTFOUND": "Nie odnaleziono strony o podanym adresie"
+    "TITLE": "Menu",
+    "HIDE": "ukryj",
+    "SHOW": "rozwiń",
+    "ITEMS": {
+      "HOME": "Strona główna",
+      "PANEL": "Panel",
+      "CONTACT": "Kontakt",
+      "ACCOUNT": "Moje konto",
+      "LOGIN": "Zaloguj się",
+      "LOGOUT": "Wyloguj się",
+      "REGISTER": "Załóż konto",
+      "SETTINGS": "Konfiguracja",
+      "API": "API",
+      "INVOICES": "Rachunki",
+      "ALERTS": "Powiadomienia",
+      "NOTFOUND": "Nie odnaleziono strony o podanym adresie"
+    }
   }
 }

@@ -1,0 +1,48 @@
+#menu {
+  .ss-menu {
+    padding-left: 0;
+    text-align: right;
+
+    #menuHideShow {
+      display: none;
+      color: $gray-500;
+
+      &:hover {
+        color: $gray-600;
+      }
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, md)) {
+      text-align: left;
+
+      #menuHideShow {
+        display: inline;
+      }
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, md)) {
+      #menuItemsContainer {
+        display: block !important;
+      }
+    }
+
+    .ss-menu-item {
+      list-style: none;
+      color: $color-text;
+
+      a {
+        text-transform: lowercase;
+        color: $color-text;
+        font-size: $font-size-sm;
+      }
+
+      .mdi {
+        font-size: $font-size-sm;
+      }
+
+      &.active, &.active a {
+        color: $color-secondary;
+      }
+    }
+  }
+}

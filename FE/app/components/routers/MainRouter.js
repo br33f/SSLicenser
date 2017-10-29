@@ -7,8 +7,6 @@ import AbstractRouter from './common/AbstractRouter';
 
 let MainController = AbstractController.extend({
   showHomepage: function () {
-    console.log('showHomepage');
-
     this.layoutView.setContent(new (Marionette.View.extend({
       template: _.template('TEST CONTENT')
     })));
