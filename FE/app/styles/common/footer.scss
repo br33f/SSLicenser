@@ -1,0 +1,21 @@
+#footer {
+  ul {
+    margin: 0.5rem;
+    text-align: center;
+
+    li {
+      font-weight: $fw-light;
+      font-size: $font-size-sm;
+
+      a {
+        color: $gray-500;
+        text-transform: lowercase;
+
+        &:hover {
+          color: $gray-600;
+          text-decoration: none; 
+        }
+      }
+    }
+  }
+}
