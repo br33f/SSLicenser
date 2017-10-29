@@ -12,6 +12,7 @@ import SSHelper from './SSHelper';
 /* Routers */
 import MainRouter from './routers/MainRouter';
 import ProductRouter from './routers/ProductRouter';
+import UserRouter from './routers/UserRouter';
 
 export default Marionette.Application.extend({
   region: '#app',
@@ -39,5 +40,6 @@ export default Marionette.Application.extend({
   startRouters() {
     new MainRouter({layoutView: this.layoutView});
     new ProductRouter({layoutView: this.layoutView});
-  }
+    new UserRouter({layoutView: this.layoutView});
+}
 });
