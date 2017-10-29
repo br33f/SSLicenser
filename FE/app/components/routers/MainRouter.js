@@ -3,13 +3,16 @@ import Marionette from 'backbone.marionette';
 import AbstractController from './common/AbstractController';
 import AbstractRouter from './common/AbstractRouter';
 
-import DefaultConentView from '../views/common/DefaultContentView';
+import DefaultContentView from '../views/common/DefaultContentView';
 
 /* Views */
 
+/* Templates */
+import notFoundTemplate from 'templates/views/notfound.jst';
+
 let MainController = AbstractController.extend({
   showHomepage: function () {
-    this.layoutView.setContent(new (DefaultConentView.extend({
+    this.layoutView.setContent(new (DefaultContentView.extend({
       template: _.template('TEST CONTENT')
     })));
   },
@@ -19,10 +22,8 @@ let MainController = AbstractController.extend({
   },
 
   showNotfound: function () {
-    console.log('error');
-
-    this.layoutView.setContent(new (Marionette.View.extend({
-      template: _.template('ERROR CONTENT')
+    this.layoutView.setContent(new (DefaultContentView.extend({
+      template: notFoundTemplate
     })));
   }
 });

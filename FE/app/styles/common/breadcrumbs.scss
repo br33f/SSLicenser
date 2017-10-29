@@ -1,4 +1,9 @@
 #breadcrumbs {
+  @media screen and (max-width: map-get($grid-breakpoints, md)) {
+    background-color: $gray-100;
+    margin-bottom: 1rem;
+  }
+
   div {
     margin: 0.3rem 0;
   }

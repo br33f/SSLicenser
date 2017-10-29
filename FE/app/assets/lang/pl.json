@@ -30,5 +30,12 @@
       "ALERTS": "Powiadomienia",
       "NOTFOUND": "Nie odnaleziono strony o podanym adresie"
     }
+  },
+  "NOTFOUND": {
+    "REQUESTED_PAGE_DOESNT_EXIST": "Strona o żądanym adresie nie istnieje.",
+    "NO_WORRIES": "Bez obaw!",
+    "USE_NAVIGATION": "Skorzystaj z nawigacji lub klinij",
+    "HERE": "tutaj",
+    "FOR_RETURN_TO_HOMEPAGE": ", aby wrócić do strony głównej."
   }
 }
