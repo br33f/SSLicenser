@@ -1,6 +1,6 @@
 <nav aria-label="breadcrumb" role="navigation">
   <ol class="breadcrumb">
-    <% _.each(breadcrumbs, (breadcrumb, idx) => { %>
+    <% _.each(breadcrumbs, function (breadcrumb, idx) { %>
     <% let isLast = idx === breadcrumbs.length - 1; %>
 
     <% if (isLast) { %>

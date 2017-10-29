@@ -3,11 +3,13 @@ import Marionette from 'backbone.marionette';
 import AbstractController from './common/AbstractController';
 import AbstractRouter from './common/AbstractRouter';
 
+import DefaultConentView from '../views/common/DefaultContentView';
+
 /* Views */
 
 let MainController = AbstractController.extend({
   showHomepage: function () {
-    this.layoutView.setContent(new (Marionette.View.extend({
+    this.layoutView.setContent(new (DefaultConentView.extend({
       template: _.template('TEST CONTENT')
     })));
   },

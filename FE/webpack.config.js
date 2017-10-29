@@ -7,7 +7,7 @@ const merge = require('webpack-merge');
 
 const webpackCommon = {
   entry: {
-    app: ['./app/initialize']
+    app: ['babel-polyfill', './app/initialize']
   },
   module: {
     rules: [
@@ -22,9 +22,11 @@ const webpackCommon = {
       },
       {
         test: /\.jst$/,
-        use: {
-          loader: 'underscore-template-loader'
-        }
+        use: [
+          {
+            loader: 'underscore-template-loader',
+          }
+        ]
       },
       {
         test: /\.(scss)$/,

@@ -4,7 +4,7 @@
     <a id="menuHideShow"><%= SS.i18n.t('MENU.HIDE') %></a>
   </h5>
   <div id="menuItemsContainer">
-    <% _.each(menuItems, menuItem => { %>
+    <% _.each(menuItems, function (menuItem) { %>
     <li class="ss-menu-item <%= menuItem.active ? 'active' : '' %>">
       <a href="<%= menuItem.path %>"> <%= menuItem.label %></a>
       <% if (menuItem.icon) { %>
