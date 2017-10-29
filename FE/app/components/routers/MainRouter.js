@@ -12,6 +12,18 @@ let MainController = AbstractController.extend({
     this.layoutView.setContent(new (Marionette.View.extend({
       template: _.template('TEST CONTENT')
     })));
+  },
+
+  notFoundRedirect: function () {
+    Backbone.history.navigate('#notFound', {trigger: true});
+  },
+
+  showNotfound: function () {
+    console.log('error');
+
+    this.layoutView.setContent(new (Marionette.View.extend({
+      template: _.template('ERROR CONTENT')
+    })));
   }
 });
 
@@ -19,7 +31,9 @@ export default AbstractRouter.extend({
   ControllerClass: MainController,
 
   appRoutes : {
-    'panel': 'showHomepage',
     '': 'showHomepage',
+    'panel': 'showHomepage',
+    'notFound': 'showNotfound',
+    '*notFound': 'notFoundRedirect',
   }
 });

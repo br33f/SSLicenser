@@ -23,6 +23,7 @@
     "SETTINGS": "Konfiguracja",
     "API": "API",
     "INVOICES": "Rachunki",
-    "ALERTS": "Powiadomienia"
+    "ALERTS": "Powiadomienia",
+    "NOTFOUND": "Nie odnaleziono strony o podanym adresie"
   }
 }
