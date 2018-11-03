@@ -5,7 +5,7 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-let bcrypt = require('bcrypt');
+let bcrypt = require('bcryptjs');
 
 module.exports = {
   attributes: {

@@ -54,8 +54,7 @@ const webpackCommon = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/',    // where the fonts will go
-            publicPath: '../'       // override the default path
+            outputPath: 'fonts/'
           }
         }]
       }

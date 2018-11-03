@@ -1,15 +1,22 @@
-import Marionette from 'backbone.marionette';
+import AbstractController from './common/AbstractController';
+import AbstractRouter from './common/AbstractRouter';
 
-let UserController = {
-  create: function () {
-    console.log(`create}`);
+/* Views */
+import RegisterView from '../views/Register';
+
+/* Templates */
+
+
+let UserController = AbstractController.extend({
+  register: function () {
+    this.layoutView.setContent(new RegisterView());
   }
-};
+});
 
-export default Marionette.AppRouter.extend({
-  controller: UserController,
+export default AbstractRouter.extend({
+  ControllerClass: UserController,
 
   appRoutes : {
-    'user/create': 'create'
+    'account/register': 'register'
   }
 });

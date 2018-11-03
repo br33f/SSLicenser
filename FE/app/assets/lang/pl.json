@@ -37,5 +37,13 @@
     "USE_NAVIGATION": "Skorzystaj z nawigacji lub klinij",
     "HERE": "tutaj",
     "FOR_RETURN_TO_HOMEPAGE": ", aby wrócić do strony głównej."
+  },
+  "REGISTER": {
+    "EMAIL": "Adres e-mail",
+    "PASSWORD": "Hasło",
+    "ENTER_EMAIL": "Wprowadź adres e-mail",
+    "ENTER_PASSWORD": "Podaj hasło",
+    "REPEAT_PASSWORD": "Powtórz hasło",
+    "BUTTON": "Zarejestruj"
   }
 }

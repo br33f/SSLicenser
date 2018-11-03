@@ -1,11 +1,8 @@
-import Marionette from 'backbone.marionette';
-
 import AbstractController from './common/AbstractController';
 import AbstractRouter from './common/AbstractRouter';
 
-import DefaultContentView from '../views/common/DefaultContentView';
-
 /* Views */
+import DefaultContentView from '../views/common/DefaultContentView';
 
 /* Templates */
 import notFoundTemplate from 'templates/views/notfound.jst';
